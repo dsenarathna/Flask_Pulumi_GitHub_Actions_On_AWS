@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /simple
+    destination: /home/ubuntu/accure
+    runas: ubuntu
+
+hooks:
+  ApplicationStart:
+    - location: scripts/execute.sh
+      timeout: 300
+      runas: ubuntu
